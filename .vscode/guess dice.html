@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id=mass></p>
+</body>
+    <script>
+        var a=Math.random(Math.random());
+        a=Math.ceil(a*6);
+        var bigo=false;
+        console.info(a);
+        console.log(a);
+        function guess(){
+            if(bigo){
+                return;
+            }
+            else{
+                t=prompt("猜猜这个是几");
+            if(t==a){
+                document.getElementById("mass").innerHTML="猜中了";
+                bigo=ture;
+            }
+            else if(t>a)
+               document.getElementById("mass").innerHTML="猜大了"
+                else    
+                document.getElementById("mass").innerHTML="猜小了"
+
+       
+        }
+        }
+        guess();
+        guess();
+        document.write("你没机会了");
+    
+    </script>
+</html>
