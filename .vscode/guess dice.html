@@ -6,35 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-    <p id=mass></p>
+    <div id="mass">
+    </div>
+    
 </body>
     <script>
         var a=Math.random(Math.random());
         a=Math.ceil(a*6);
         var bigo=false;
+        var str;
+        
+     
         console.info(a);
         console.log(a);
         function guess(){
+          
             if(bigo){
                 return;
             }
             else{
-                t=prompt("猜猜这个是几");
+                t=prompt("猜猜这个是几")*1;
+               if(!Number.isInteger(t)||t<1||t>6){
+                   alert("格式有误");
+                   return ;
+               }
+              
+
+            var bff=Math.abs(t-a);
+            console.info(bff);
+            
             if(t==a){
-                document.getElementById("mass").innerHTML="猜中了";
-                bigo=ture;
+                str = "猜中了"+"<img src=\"../images/1.jpeg\">"
+                bigo=1;
             }
             else if(t>a)
-               document.getElementById("mass").innerHTML="猜大了"
+                    if(bff>1)
+                    str="大得多"
+                    else{
+                        str="有点大";
+                    }
                 else    
-                document.getElementById("mass").innerHTML="猜小了"
+                if(bff>1)
+                    str="小得多"
+                    else{
+                        str="有点小";
+                    }
 
        
         }
+        document.getElementById("mass").innerHTML=str;
         }
         guess();
+
         guess();
-        document.write("你没机会了");
-    
+     
+        
     </script>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body onclick="go()">
+
+</body>
+<script>
+      var a;
+        a=69*1;
+    function go() {
+      
+        if(a%7==0){
+            document.body.innerHTML = document.body.innerHTML +"过<br>";    
+        }
+        else if((a%10==7)||Math.floor(a/10)==7){
+            
+            document.body.innerHTML = document.body.innerHTML +"过<br>";    
+        }
+            else{
+            document.body.innerHTML = document.body.innerHTML + a+"<br>";}
+      
+        
+      
+        a++;   
+    }
+   
+</script>
+
+</html>
